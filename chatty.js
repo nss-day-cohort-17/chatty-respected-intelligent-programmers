@@ -27,3 +27,4 @@ function createList(e) {
 	}
 document.getElementById("putHtmlHere").innerHTML = chattyContent
 }
+//
