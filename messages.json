@@ -1,19 +1,24 @@
 {
   "messages": [
     {
-      "message": "Help, my dog ate my computer"
+      "message": "Help, my dog ate my computer",
+      "name": "dog"
     },
     {
-      "message": "Help, my computer is on fire"
+      "message": "Help, my computer is on fire",
+      "name": "fire"
     },
     {
-      "message": "Help, my girlfriend deleted my code"
+      "message": "Help, my girlfriend deleted my code",
+      "name": "girlfriend"
     },
     {
-      "message": "Help, my life is in shambles"
+      "message": "Help, my life is in shambles",
+      "name": "life"
     },
     {
-      "message": "No worries mate, all is well"
+      "message": "No worries mate, all is well",
+      "name": "well"
     }
   ]
 }
