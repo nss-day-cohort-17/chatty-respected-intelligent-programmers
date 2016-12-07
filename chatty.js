@@ -3,6 +3,7 @@
 //      Global Vars               //
 //================================//
 var data;
+var chattyContent = "";
 //================================//
 //      Json                      //
 //================================//
@@ -20,10 +21,9 @@ var myRequest = new XMLHttpRequest();
 //  load list into html           //
 //================================//
 function createList(e) {
-	var chattyContent = "";
 	for (var i = 0; i < data.messages.length; i++) {
 		chattyContent += `<li>${data.messages[i].name}: ${data.messages[i].message}
-                      <button>Delete</li></button><br></li>`
+                      <button class="stop">Delete</li></button><br></li>`
 	  document.getElementById("putHtmlHere").innerHTML = chattyContent
   }
 }
@@ -33,17 +33,22 @@ function createList(e) {
 document.getElementById("submit").addEventListener("click", clear);
 //
 function clear(){
-  var btn = document.getElementsByTagName("button");
+  document.getElementById("submit").disabled = false;
   console.log("Clear button hit");
   if(document.getElementById("putHtmlHere").innerHTML == ""){
-    document.getElementsByTagName("button").disabled = true;
-    console.log("Text Blank");
+    document.getElementById("submit").disabled = true;
+    console.log();
   }
   document.getElementById("putHtmlHere").innerHTML= "";
 }
 //================================//
 //  listener on innerHTML Button  //
 //================================//
-document.querySelector("body").addEventListener("click", function(event) {
+document.querySelector("body").addEventListener("click", clearLine);
+//
+function clearLine() {
   console.log(event);
-})
+  event.target.id.onclick = function() {this.parentNode.removeChild(this);}
+    console.log("Delete Line");
+
+}
