@@ -1,0 +1,52 @@
+/*need to make a class for special font text
+This will be used for the Chatty! logo (or find a decent picture for it)
+Probably go with just the text, you can make it fancy later, just get it
+working for now.
+
+See what you  might be able to use boot strap for as that has been added
+so... yeah, start looking up the various things for page layout via
+Bootstrap.
+
+Remember to look up how to link the check boxes to different themes
+and text size (I think qsuedo classes should work for this, but not
+sure)
+
+Make classes to specify fonts for the text in the messages (maybe use
+different fonts for the text posted and the text the shows up when
+typing)
+
+.navbarText {
+font-family:
+font-weight: bold;
+}
+
+.pageText {
+font-family:
+font-size:
+}
+
+set classes for both checkboxes so you can activate them separately,
+somthing like .dark input[type=checkbox]:checked {
+code stuff
+}
+
+
+give messageBoard div a set size and try to add a scroll bar as
+text is added.
+see if this works if you edit it for div instead of textarea,
+textarea {
+    overflow-y: scroll;
+    height: 100px;
+    resize: none; Remove this if you want the user to resize the textarea
+}
+
+So...
+
+.messageBox {
+overflow-y: scroll;
+height: 60%;
+resize: none;
+}
+
+
+maybe add active and hover psuedo classes to the text entry bar
