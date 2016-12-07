@@ -15,16 +15,24 @@ Make classes to specify fonts for the text in the messages (maybe use
 different fonts for the text posted and the text the shows up when
 typing)
 
+
+picked up these two from Google fonts
+
+    font-family: 'Rosario', sans-serif;
+
+    font-family: 'Volkhov', serif;
+
+*/
 .navbarText {
-font-family:
+font-family: "Volkhov", serif;
 font-weight: bold;
 }
 
 .pageText {
-font-family:
+font-family: "Rosario", sans-serif;
 font-size:
 }
-
+/*
 set classes for both checkboxes so you can activate them separately,
 somthing like .dark input[type=checkbox]:checked {
 code stuff
