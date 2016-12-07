@@ -33,7 +33,12 @@ function createList(e) {
 document.getElementById("submit").addEventListener("click", clear);
 //
 function clear(){
+  var btn = document.getElementsByTagName("button");
   console.log("Clear button hit");
+  if(document.getElementById("putHtmlHere").innerHTML == ""){
+    document.getElementsByTagName("button").disabled = true;
+    console.log("Text Blank");
+  }
   document.getElementById("putHtmlHere").innerHTML= "";
 }
 //================================//
