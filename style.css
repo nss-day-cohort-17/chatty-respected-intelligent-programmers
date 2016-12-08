@@ -1,8 +1,4 @@
-/*need to make a class for special font text
-This will be used for the Chatty! logo (or find a decent picture for it)
-Probably go with just the text, you can make it fancy later, just get it
-working for now.
-
+/*
 See what you  might be able to use boot strap for as that has been added
 so... yeah, start looking up the various things for page layout via
 Bootstrap.
@@ -11,16 +7,13 @@ Remember to look up how to link the check boxes to different themes
 and text size (I think qsuedo classes should work for this, but not
 sure)
 
-Make classes to specify fonts for the text in the messages (maybe use
-different fonts for the text posted and the text the shows up when
-typing)
-
-
 picked up these two from Google fonts
 
     font-family: 'Rosario', sans-serif;
+    ^for message text
 
     font-family: 'Volkhov', serif;
+    ^for heanding text
 
 */
 .navbarText {
@@ -39,6 +32,52 @@ code stuff
 }
 
 
+<label for="toggle-1">I'm a toggle</label>
+<input type="checkbox" id="toggle-1">
+<div>I'm controlled by toggle. No JavaScript!</div>
+-----
+input[type=checkbox] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+label {
+  -webkit-appearance: push-button;
+  -moz-appearance: button;
+  display: inline-block;
+  margin: 60px 0 10px 0;
+  cursor: pointer;
+}
+
+div {
+   background: green;
+   width: 400px;
+   height: 100px;
+   line-height: 100px;
+   color: white;
+   text-align: center;
+}
+
+
+input[type=checkbox]:checked ~ div {
+   background: red;
+}
+
+*/
+
+
+input[type=checkbox] {
+  display: none;
+}
+
+.dark:checked ~ *{
+  background-color: darkgray;
+  color: #c6ecd9;
+}
+
+
+
+/*
 give messageBoard div a set size and try to add a scroll bar as
 text is added.
 see if this works if you edit it for div instead of textarea,
