@@ -23,7 +23,7 @@ var myRequest = new XMLHttpRequest();
 function createList(e) {
 	for (var i = 0; i < data.messages.length; i++) {
 		chattyContent += `<li>${data.messages[i].name}: ${data.messages[i].message}
-                      <button class="stop">Delete</li></button><br></li>`
+                      <button class="delete">Delete</li></button><br></li>`
 	  document.getElementById("putHtmlHere").innerHTML = chattyContent
   }
 }
@@ -44,11 +44,28 @@ function clear(){
 //================================//
 //  listener on innerHTML Button  //
 //================================//
-document.querySelector("body").addEventListener("click", clearLine);
+document.querySelector("body").addEventListener("click", function(e) {
+  removeListItem(e);
+});
 //
-function clearLine() {
-  console.log(event);
-  event.target.id.onclick = function() {this.parentNode.removeChild(this);}
-    console.log("Delete Line");
-
+function removeListItem(e){
+  if (e.target.tagName.toLowerCase() === "button"){
+    this.ancestor('li').remove();
+  }
+  console.log(e.target);
 }
+/*
+http://postdocs.stanford.edu/Templates/yui-3.5.1/docs/event/delegation.html
+
+
+document.querySelector("body").addEventListener("click", function(event) {
+  console.log(chattyContent);
+  if (event.target.tagName.toLowerCase() === "li") {
+    console.log("You clicked on an <li> element");
+    document.getElementById("putHtmlHere").removeChild(event);
+  }
+
+
+
+
+*/
