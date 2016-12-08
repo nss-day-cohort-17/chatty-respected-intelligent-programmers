@@ -5,9 +5,12 @@
 //================================//
 var data;
 var chattyContent = "";
+var newMessage;
 //================================//
 //      Json                      //
 //================================//
+
+
 function messageList(e) {
   data = JSON.parse(e.target.responseText);
   console.log(data);
@@ -27,6 +30,24 @@ function createList(e) {
                       <button class="delete">Delete</button><br></li>`
 	  document.getElementById("putHtmlHere").innerHTML = chattyContent
   }
+
+}
+//===========================================//
+//   Input Field                              //
+//===========================================//
+document.getElementById("inputMessage").addEventListener("keypress", postMessage)
+//
+function postMessage() {
+  if ((event.keyCode == 13) && (document.getElementById("inputMessage").value != "")) {
+    console.log('yay');
+    newMessage = document.getElementById("inputMessage").value;
+    console.log('new message', newMessage);
+      chattyContent += `<li>${newMessage}
+                      <button class="delete">Delete</button><br></li>`
+      document.getElementById("putHtmlHere").innerHTML = chattyContent
+      event.currentTarget.value = "";
+  }
+
 }
 //===========================================//
 //   listener on Clear Message Board Button  //
