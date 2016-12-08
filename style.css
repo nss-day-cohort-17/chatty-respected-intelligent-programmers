@@ -116,6 +116,7 @@ input[type=checkbox] {
   /*overflow-x: none;*/
   flex-wrap: wrap;
   overflow-y: scroll;
+  border-bottom: 3px solid #a3c2c2;
   height: 300px;
   width: 80%;
   min-width: 300px;
