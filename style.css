@@ -97,6 +97,12 @@ input[type=checkbox] {
 }
 
 
+.messageBox {
+overflow-y: scroll;
+height: 50%;
+resize: none;
+}
+
 /*
 give messageBoard div a set size and try to add a scroll bar as
 text is added.
