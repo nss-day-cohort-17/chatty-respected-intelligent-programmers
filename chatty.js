@@ -49,10 +49,9 @@ document.querySelector("body").addEventListener("click", function(e) {
 });
 //
 function removeListItem(e){
-  if (e.target.tagName.toLowerCase() === "button"){
-    this.ancestor('li').remove();
+if (e.target.tagName.toLowerCase() === "li"){
   }
-  console.log(e.target);
+  console.log(e.srcElement.parentElement);
 }
 /*
 http://postdocs.stanford.edu/Templates/yui-3.5.1/docs/event/delegation.html
