@@ -31,13 +31,13 @@ function createList(e) {
 //===========================================//
 //   listener on Clear Message Board Button  //
 //===========================================//
-document.getElementById("submit").addEventListener("click", clear);
+document.getElementById("allClear").addEventListener("click", clear);
 //
 function clear(){
   console.log("Clear Message Board button hit");
-  document.getElementById("submit").disabled = false;
+  document.getElementById("allClear").disabled = false;
   if(document.getElementById("putHtmlHere").innerHTML == ""){
-    document.getElementById("submit").disabled = true;
+    document.getElementById("allClear").disabled = true;
     console.log("Button Disabled");
   }
   document.getElementById("putHtmlHere").innerHTML = "";
