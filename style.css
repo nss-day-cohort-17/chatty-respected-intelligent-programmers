@@ -69,11 +69,19 @@ label {
 
 }
 
-button {
+button.navbarText {
   color: #476b6b;
+  height: auto;
   /*padding: 5px;*/
   /*margin: 10px;*/
   border-radius: 5%;
+
+  background-image:
+    radial-gradient(
+      circle at top left,
+      #94b8b8,
+      #75a3a3
+      );
 
 }
 
