@@ -51,13 +51,13 @@ input[type=checkbox] {
   color: #c6ecd9;
 }
 
-.dark:checked ~ *label{
-  
+.colorChange label:after {
+  height:1em
   background-color: #527a7a;
   color: #c6ecd9;
 }
 
-.large:checked ~*{
+.large:checked ~ *{
   font-size: 2em;
 }
 
