@@ -47,13 +47,20 @@ label {
   padding: 5px;
   margin: 10px;
   border-radius: 5%;
-  background-image:
+  /*background-image:
       linear-gradient(
         to top,
         #527a7a 15%,
         #94b8b8 15%,
         #94b8b8 85%,
         #527a7a 85%
+      );*/
+
+  background-image:
+    radial-gradient(
+      circle at top left,
+      #94b8b8,
+      #75a3a3
       );
   box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5),
   0px 1px 0px rgba(255,255,255,0.2);
