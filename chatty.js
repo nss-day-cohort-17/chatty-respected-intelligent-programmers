@@ -1,4 +1,5 @@
 /*===== Team chatty-respected-inteligent-programmers [RIP] ====*/
+/* ================ Begin =============== */
 //================================//
 //      Global Vars               //
 //================================//
@@ -23,7 +24,7 @@ var myRequest = new XMLHttpRequest();
 function createList(e) {
 	for (var i = 0; i < data.messages.length; i++) {
 		chattyContent += `<li>${data.messages[i].name}: ${data.messages[i].message}
-                      <button class="delete">Delete</li></button><br></li>`
+                      <button class="delete">Delete</button><br></li>`
 	  document.getElementById("putHtmlHere").innerHTML = chattyContent
   }
 }
@@ -33,13 +34,14 @@ function createList(e) {
 document.getElementById("submit").addEventListener("click", clear);
 //
 function clear(){
+  console.log("Clear Message Board button hit");
   document.getElementById("submit").disabled = false;
-  console.log("Clear button hit");
   if(document.getElementById("putHtmlHere").innerHTML == ""){
     document.getElementById("submit").disabled = true;
-    console.log();
+    console.log("Button Disabled");
   }
-  document.getElementById("putHtmlHere").innerHTML= "";
+  document.getElementById("putHtmlHere").innerHTML = "";
+  console.log("Clear Message Board function done.");
 }
 //================================//
 //  listener on innerHTML Button  //
@@ -49,23 +51,12 @@ document.querySelector("body").addEventListener("click", function(e) {
 });
 //
 function removeListItem(e){
-if (e.target.tagName.toLowerCase() === "li"){
-  }
+   console.log(e);
+if (e.target.textContent.toLowerCase() === "delete"){
   e.srcElement.parentElement.remove();
   // e.srcElement.parentElement = "";
   console.log(e);
-}
-/*
-
-
-document.querySelector("body").addEventListener("click", function(event) {
-  console.log(chattyContent);
-  if (event.target.tagName.toLowerCase() === "li") {
-    console.log("You clicked on an <li> element");
-    document.getElementById("putHtmlHere").removeChild(event);
   }
-
-
-
-
-*/
+}
+/* ================ END =============== */
+//
