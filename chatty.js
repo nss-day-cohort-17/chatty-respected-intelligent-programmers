@@ -51,10 +51,11 @@ document.querySelector("body").addEventListener("click", function(e) {
 function removeListItem(e){
 if (e.target.tagName.toLowerCase() === "li"){
   }
-  console.log(e.srcElement.parentElement);
+  e.srcElement.parentElement.remove();
+  // e.srcElement.parentElement = "";
+  console.log(e);
 }
 /*
-http://postdocs.stanford.edu/Templates/yui-3.5.1/docs/event/delegation.html
 
 
 document.querySelector("body").addEventListener("click", function(event) {
