@@ -42,8 +42,8 @@ function postMessage() {
   if ((event.keyCode == 13) && (document.getElementById("inputMessage").value != "")) {
     newMessage = document.getElementById("inputMessage").value;
     console.log("Posted New Message ", newMessage);
-    document.getElementById("putHtmlHere").innerHTML += `<li>${newMessage}
-                                                         <button class="delete">Delete</button><br></li>`
+    document.getElementById("putHtmlHere").innerHTML += `<li><button class="delete">Delete</button>
+                                                         ${newMessage}<br></li>`
     document.getElementById("inputMessage").value = "";
   }
 }
