@@ -1,12 +1,4 @@
 /*
-See what you  might be able to use boot strap for as that has been added
-so... yeah, start looking up the various things for page layout via
-Bootstrap.
-
-Remember to look up how to link the check boxes to different themes
-and text size (I think qsuedo classes should work for this, but not
-sure)
-
 picked up these two from Google fonts
 
     font-family: 'Rosario', sans-serif;
@@ -98,6 +90,11 @@ input[type=checkbox] {
   font-size: 1.5em;
 }
 
+#inputMessage {
+  margin-top: 20px;
+  color: black;
+  height: 1.5em;
+}
 
 
 /*
