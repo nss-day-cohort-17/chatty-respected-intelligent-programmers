@@ -107,7 +107,7 @@ input[type=checkbox] {
 
 .messageBox {
 overflow-y: scroll;
-height: 50%;
+height: 300px;
 resize: none;
 }
 
