@@ -51,6 +51,12 @@ input[type=checkbox] {
   color: #c6ecd9;
 }
 
+.dark:checked ~ *label{
+  
+  background-color: #527a7a;
+  color: #c6ecd9;
+}
+
 .large:checked ~*{
   font-size: 2em;
 }
