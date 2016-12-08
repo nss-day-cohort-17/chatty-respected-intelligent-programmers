@@ -9,9 +9,11 @@ picked up these two from Google fonts
 
 */
 
+
 .navi {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .navbarText {
 font-family: "Volkhov", serif;
@@ -37,6 +39,7 @@ input[type=checkbox]:checked ~ div {
 .fillUp {
   height: 100%;
   width: 100%;
+  min-width: 300px;
   padding: 25px;
 }
 
@@ -103,15 +106,22 @@ input[type=checkbox] {
   margin-top: 20px;
   color: black;
   height: 1.5em;
+  width: 300px;
 }
 
 
 .messageBox {
   display: flex;
   flex-direction: column-reverse;
+  /*overflow-x: none;*/
+  flex-wrap: wrap;
   overflow-y: scroll;
   height: 300px;
+  width: 80%;
+  min-width: 300px;
   resize: none;
+  list-style: none;
+  padding: 10px;
 }
 
 /*
