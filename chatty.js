@@ -27,8 +27,8 @@ var myRequest = new XMLHttpRequest();
 //================================//
 function createList(e) {
   for (var i = 0; i < data.messages.length; i++) {
-    chattyContent += `<li>${data.messages[i].name}: ${data.messages[i].message}
-                      <button class="delete">Delete</button><br></li>`
+    chattyContent += `<li><button class="delete">Delete</button>
+                      ${data.messages[i].name}: ${data.messages[i].message}<br></li>`
     document.getElementById("putHtmlHere").innerHTML = chattyContent;
   }
 }

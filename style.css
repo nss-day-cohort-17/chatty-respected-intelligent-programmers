@@ -123,7 +123,14 @@ input[type=checkbox] {
   list-style: none;
   padding: 10px;
 }
-
+.delete{
+  margin:0;
+  padding:0 5px;
+  color:#fff;
+  background-color: #7ba6a6;
+  border-radius: 5px;
+  font-size: .5em;
+}
 /*
 give messageBoard div a set size and try to add a scroll bar as
 text is added.
@@ -144,3 +151,4 @@ resize: none;
 
 
 maybe add active and hover psuedo classes to the text entry bar
+*/
