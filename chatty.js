@@ -44,6 +44,7 @@ function postMessage() {
     console.log("Posted New Message ", newMessage);
     document.getElementById("putHtmlHere").innerHTML += `<li>${newMessage}
                                                          <button class="delete">Delete</button><br></li>`
+    document.getElementById("inputMessage").value = "";
   }
 }
 //
