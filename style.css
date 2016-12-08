@@ -69,21 +69,21 @@ label {
 
 }
 
-button.navbarText {
+button {
   color: #476b6b;
   height: auto;
-  /*padding: 5px;*/
-  /*margin: 10px;*/
   border-radius: 5%;
 
-  background-image:
+  /*background-image:
     radial-gradient(
       circle at top left,
       #94b8b8,
       #75a3a3
-      );
+      );*/
 
 }
+
+
 
 input[type=checkbox] {
   display: none;
@@ -97,6 +97,7 @@ input[type=checkbox] {
 .large:checked ~ *{
   font-size: 1.5em;
 }
+
 
 #inputMessage {
   margin-top: 20px;
